@@ -1,10 +1,11 @@
 import type { ActionFunctionArgs, LoaderFunctionArgs } from "@remix-run/node";
-import { json } from "@remix-run/node";
+import { json, LinksFunction } from "@remix-run/node";
 import { useFetcher, useLoaderData } from "@remix-run/react";
 import type { FunctionComponent } from "react";
 import invariant from "tiny-invariant";
 import type { ContactRecord } from "../data";
 import { getContact, updateContact } from "../data";
+import devStylesHref from "../dev.css";
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
   invariant(params.contactId, "Missing contactId param");
@@ -13,6 +14,10 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
     throw new Response("Not Found", { status: 404 });
   }
   return json({ contact });
+};
+
+export const links: LinksFunction = () => {
+  return [{ rel: "stylesheet", href: devStylesHref }];
 };
 
 const Favorite: FunctionComponent<{

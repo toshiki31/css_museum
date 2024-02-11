@@ -1,0 +1,89 @@
+/* ここから勉強したCSSを記述する */
+#loader {
+  display: flex;
+  flex-wrap: wrap; /* 子要素を折り返す */
+  margin: 30px;
+  gap: 30px;
+}
+.frame {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #0463ca;
+  border-radius: 8px;
+  /* display + justify-content: 子要素の水平方向を中心にする */
+  display: flex;
+  justify-content: center;
+  /* display + align-items: 子要素の垂直方向を中心にする */
+  align-items: center;
+}
+.loader1 {
+  width: 50px;
+  height: 50px;
+  /* background-color: #121212; */
+  border-radius: 50%;
+  border: 8px solid;
+  border-color: #b0d6f5;
+  border-right-color: #0463ca;
+  animation: s2 1s infinite linear;
+}
+@keyframes s2 {
+  to {
+    transform: rotate(1turn);
+  }
+}
+.loader2 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 8px solid;
+  border-color: #b0d6f5;
+  border-right-color: #0463ca;
+  border-left-color: #0463ca;
+  animation: s2 1s infinite linear;
+}
+.loader3 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: conic-gradient(#0000 10%, #0463ca);
+  mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+  animation: s2 1s infinite linear;
+}
+.loader4 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, #0463ca, 94%, #0000) top/8px 8px
+      no-repeat,
+    conic-gradient(#0000 10%, #0463ca);
+  mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+  animation: s2 1s infinite linear;
+}
+.loader5 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 3px;
+  background: radial-gradient(farthest-side, #0463ca, 95%, #0000) 50% 0/12px
+      12px no-repeat,
+    radial-gradient(
+        farthest-side,
+        #0000 calc(100% - 5px),
+        #0463ca calc(100% - 4px)
+      )
+      content-box;
+  animation: s2 1s infinite linear;
+}
+.loader6 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, #0463ca, 95%, #0000) top/12px 12px
+      no-repeat,
+    radial-gradient(farthest-side, #0463ca, 95%, #0000) bottom/12px 12px
+      no-repeat,
+    radial-gradient(farthest-side, #0463ca, 95%, #0000) left/12px 12px no-repeat,
+    radial-gradient(farthest-side, #0463ca, 95%, #0000) right/12px 12px
+      no-repeat;
+  animation: s2 1s infinite linear;
+}
