@@ -55,6 +55,11 @@ export default function Contact() {
         </h1>
         {contact.notes ? <p>{contact.notes}</p> : null}
       </div>
+      <div id="loader">
+        <div className="frame">
+          <div className="loader1"></div>
+        </div>
+      </div>
     </div>
   );
 }

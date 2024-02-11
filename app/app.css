@@ -286,6 +286,7 @@ i {
 #contact {
   max-width: 40rem;
   display: flex;
+  flex-flow: column;
 }
 
 #contact h1 {
@@ -324,3 +325,34 @@ i {
 }
 
 /* ここから勉強したCSSを記述する */
+#loader {
+  display: flex;
+  margin: 30px;
+  gap: 10px;
+}
+.frame {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #0463ca;
+  border-radius: 8px;
+  /* display + justify-content: 子要素の水平方向を中心にする */
+  display: flex;
+  justify-content: center;
+  /* display + align-items: 子要素の垂直方向を中心にする */
+  align-items: center;
+}
+.loader1 {
+  width: 50px;
+  height: 50px;
+  /* background-color: #121212; */
+  border-radius: 50%;
+  border: 8px solid;
+  border-color: #b0d6f5;
+  border-right-color: #0463ca;
+  animation: s2 1s infinite linear;
+}
+@keyframes s2 {
+  to {
+    transform: rotate(1turn);
+  }
+}
