@@ -84,9 +84,6 @@ export default function App() {
               />
               <div id="search-spinner" aria-hidden hidden={!searching} />
             </Form>
-            <Form method="post">
-              <button type="submit">New</button>
-            </Form>
           </div>
           <nav>
             {contacts.length ? (
