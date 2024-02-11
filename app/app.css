@@ -327,6 +327,7 @@ i {
 /* ここから勉強したCSSを記述する */
 #loader {
   display: flex;
+  flex-wrap: wrap;
   margin: 30px;
   gap: 30px;
 }
@@ -397,5 +398,18 @@ i {
         #0463ca calc(100% - 4px)
       )
       content-box;
+  animation: s2 1s infinite linear;
+}
+.loader6 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, #0463ca, 95%, #0000) top/12px 12px
+      no-repeat,
+    radial-gradient(farthest-side, #0463ca, 95%, #0000) bottom/12px 12px
+      no-repeat,
+    radial-gradient(farthest-side, #0463ca, 95%, #0000) left/12px 12px no-repeat,
+    radial-gradient(farthest-side, #0463ca, 95%, #0000) right/12px 12px
+      no-repeat;
   animation: s2 1s infinite linear;
 }
