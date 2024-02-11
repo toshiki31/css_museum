@@ -56,9 +56,26 @@ export default function Contact() {
         {contact.notes ? <p>{contact.notes}</p> : null}
       </div>
       <div id="loader">
+        {/* loader追加 */}
         <div className="frame">
           <div className="loader1"></div>
         </div>
+        <div className="frame">
+          <div className="loader2"></div>
+        </div>
+        <div className="frame">
+          <div className="loader3"></div>
+        </div>
+        <div className="frame">
+          <div className="loader4"></div>
+        </div>
+        <div className="frame">
+          <div className="loader5"></div>
+        </div>
+        <div className="frame">
+          <div className="loader6"></div>
+        </div>
+        {/* loader終了 */}
       </div>
     </div>
   );
