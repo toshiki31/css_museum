@@ -16,6 +16,7 @@ import { useEffect, useState } from "react";
 import { createEmptyContact, getContacts } from "./data";
 import type { LinksFunction, LoaderFunctionArgs } from "@remix-run/node";
 import appStylesHref from "./app.css";
+import { Headers } from "./components/header";
 
 export const action = async () => {
   const contact = await createEmptyContact();
@@ -43,11 +44,6 @@ export default function App() {
     new URLSearchParams(navigation.location.search).has("q");
 
   useEffect(() => {
-    // // id="q" のHTML要素(検索フィールド)を取得
-    // const searchField = document.getElementById("q") as HTMLInputElement;
-    // if (searchField instanceof HTMLInputElement) {
-    //   searchField.value = q || "";
-    // }
     setQuery(q || "");
   }, [q]);
 
@@ -60,6 +56,8 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <Headers />
+
         <div id="sidebar">
           <h1>Remix Contacts</h1>
           <div>
