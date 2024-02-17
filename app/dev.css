@@ -77,7 +77,6 @@
 .loader6 {
   width: 50px;
   height: 50px;
-  border-radius: 50%;
   background: radial-gradient(farthest-side, #0463ca, 95%, #0000) top/12px 12px
       no-repeat,
     radial-gradient(farthest-side, #0463ca, 95%, #0000) bottom/12px 12px
@@ -85,5 +84,21 @@
     radial-gradient(farthest-side, #0463ca, 95%, #0000) left/12px 12px no-repeat,
     radial-gradient(farthest-side, #0463ca, 95%, #0000) right/12px 12px
       no-repeat;
+  animation: s2 1s infinite linear;
+}
+.loader7 {
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(farthest-side, #0463ca, 95%, #0000) top/12px 12px
+      no-repeat,
+    radial-gradient(farthest-side, #0463ca, 95%, #0000) bottom/12px 12px
+      no-repeat,
+    radial-gradient(farthest-side, #0463ca, 95%, #0000) left/12px 12px no-repeat,
+    radial-gradient(farthest-side, #0463ca, 95%, #0000) right/12px 12px
+      no-repeat,
+    radial-gradient(farthest-side, #0463ca, 95%, #0000) 50% 50%/12px 12px
+      no-repeat,
+    linear-gradient(#0463ca 0 0) 50% 50%/4px 96% no-repeat,
+    linear-gradient(#0463ca 0 0) 50% 50%/96% 4px no-repeat;
   animation: s2 1s infinite linear;
 }
