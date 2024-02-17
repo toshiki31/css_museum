@@ -83,6 +83,12 @@ export default function Contact() {
         <div className="frame">
           <div className="loader7"></div>
         </div>
+        <div className="frame">
+          <div className="loader8"></div>
+        </div>
+        <div className="frame">
+          <div className="loader9"></div>
+        </div>
         {/* loader終了 */}
       </div>
     </div>

@@ -102,3 +102,40 @@
     linear-gradient(#0463ca 0 0) 50% 50%/96% 4px no-repeat;
   animation: s2 1s infinite linear;
 }
+.loader8 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, #0463ca, 95%, #0000) top/12px 12px
+      no-repeat,
+    radial-gradient(
+      farthest-side,
+      #0000 calc(100% - 13px),
+      #b0d6f5 calc(100% - 12px)
+    );
+  animation: s2 1s infinite linear;
+}
+.loader9 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #0463ca;
+  background: radial-gradient(
+      farthest-side,
+      #0000 calc(100% - 6px),
+      currentColor calc(100% - 5px)
+    ),
+    radial-gradient(circle 6px, currentColor 95%, #0000 0),
+    linear-gradient(currentColor 0 0) center/4px 96% no-repeat,
+    linear-gradient(currentColor 0 0) center/96% 4px no-repeat;
+  position: relative;
+  animation: s2 1s infinite linear;
+}
+.loader9::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: inherit;
+  transform: rotate(45deg);
+}
