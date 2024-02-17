@@ -1,4 +1,5 @@
 /* ここから勉強したCSSを記述する */
+/* loader1 */
 #loader {
   display: flex;
   flex-wrap: wrap; /* 子要素を折り返す */
@@ -31,6 +32,7 @@
     transform: rotate(1turn);
   }
 }
+/* loader2 */
 .loader2 {
   width: 50px;
   height: 50px;
@@ -41,6 +43,7 @@
   border-left-color: #0463ca;
   animation: s2 1s infinite linear;
 }
+/* loader3 */
 .loader3 {
   width: 50px;
   height: 50px;
@@ -49,6 +52,7 @@
   mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
   animation: s2 1s infinite linear;
 }
+/* loader4 */
 .loader4 {
   width: 50px;
   height: 50px;
@@ -59,6 +63,7 @@
   mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
   animation: s2 1s infinite linear;
 }
+/* loader5 */
 .loader5 {
   width: 50px;
   height: 50px;
@@ -74,6 +79,7 @@
       content-box;
   animation: s2 1s infinite linear;
 }
+/* loader6 */
 .loader6 {
   width: 50px;
   height: 50px;
@@ -86,6 +92,7 @@
       no-repeat;
   animation: s2 1s infinite linear;
 }
+/* loader7 */
 .loader7 {
   width: 50px;
   height: 50px;
@@ -102,6 +109,7 @@
     linear-gradient(#0463ca 0 0) 50% 50%/96% 4px no-repeat;
   animation: s2 1s infinite linear;
 }
+/* loader8 */
 .loader8 {
   width: 50px;
   height: 50px;
@@ -115,6 +123,7 @@
     );
   animation: s2 1s infinite linear;
 }
+/* loader9 */
 .loader9 {
   width: 50px;
   height: 50px;
@@ -138,4 +147,33 @@
   border-radius: inherit;
   background: inherit;
   transform: rotate(45deg);
+}
+/* loader10 */
+.loader10 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+}
+.loader10::before,
+.loader10::after {
+  content: "";
+  grid-area: 1/1;
+  color: #0463ca;
+  --c: radial-gradient(farthest-side, currentColor, 95%, #0000);
+  background: var(--c) top, var(--c) bottom, var(--c) left, var(--c) right;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  animation: s3 1s infinite;
+}
+.loader10::before {
+  margin: 4px;
+  /* filter: hue-rotate(45deg); */ /* 色相を回転させる */
+  color: #09b1ec;
+  background-size: 8px 8px;
+  animation-timing-function: linear;
+}
+@keyframes s3 {
+  100% {
+    transform: rotate(0.5turn);
+  }
 }
