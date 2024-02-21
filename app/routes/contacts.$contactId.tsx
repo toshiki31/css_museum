@@ -92,6 +92,9 @@ export default function Contact() {
         <div className="frame">
           <div className="loader10"></div>
         </div>
+        <div className="frame">
+          <div className="loader11"></div>
+        </div>
         {/* loader終了 */}
       </div>
     </div>
